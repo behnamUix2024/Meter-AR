@@ -10,7 +10,7 @@ interface LoginApiService {
 
     @FormUrlEncoded
     @POST("email/login")
-    suspend fun sendCodeInEmail(
+    suspend fun sendRequest(
         @Field("email") email:String
     ):Response<DefaultModel>
 }
