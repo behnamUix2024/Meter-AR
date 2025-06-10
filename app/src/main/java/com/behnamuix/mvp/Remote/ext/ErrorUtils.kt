@@ -5,12 +5,12 @@ import com.google.gson.Gson
 import retrofit2.Response
 
 object ErrorUtils {
-    fun getError(response: Response<*>):String{
+    fun getError(res:Response<*>):String{
         var error:String?=null
-        var errorBody=response.errorBody()
+        val errorBody=res.errorBody()
         if(errorBody!=null){
-            error=Gson().fromJson(errorBody.string(),ErrorModel::class.java).message
+            error=Gson().fromJson(errorBody.string(),ErrorModel()::class.java).message
         }
-        return error?:"ارتباط با سرور امکان پذیر نبود"
+        return error?:"ارتباط با سرور امکان پذیر نیست!"
     }
 }

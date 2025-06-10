@@ -1,5 +1,5 @@
 package com.behnamuix.mvp.Remote
-//1
+
 import com.behnamuix.mvp.Remote.apiRepository.LoginApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -11,4 +11,5 @@ object RetrofitService {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     val apiService:LoginApiService= retrofit.create(LoginApiService::class.java)
+
 }
