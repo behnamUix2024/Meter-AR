@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">MvpTest</string>
+    <string name="app_name">متر مجازی AR</string>
+    <string name="title_note_toturial">با تشکر از انتخاب این اپلیکیشن لطفا به نکات زیر توجه کنید:</string>
+    <string name="note1">⊚.نور محیط تاثیر زیادی روی دقت اندازه گیری دارد</string>
+    <string name="note0">(دستگاه شما متر مجازی را ساپورت میکند )</string>
+    <string name="noteNot">(متاسفانه دستگاه شما متر مجازی را ساپورت نمیکند! )</string>
+    <string name="note2">⊚.کیفیت دوربین روی دقت اندازه گیری تاثیر دارد</string>
+    <string name="note3">⊚. لطفا تلفن همراه خود را بر روی سطح مورد ارزیابی حرکت دهید همانند راهنما تا اپلیکیشن بتواند عملیات ردیابی سطح را انجام دهد</string>
+    <string name="note4">⊚.بر روی نقاط سفید رنگ ایجاد شده بر روی سطح ضربه بزنید تا محاسبه انجام شود</string>
+    <string name="tv_btn_note">متوجه شدم!</string>
 </resources>

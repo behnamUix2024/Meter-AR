@@ -4,14 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.behnamuix.mvp"
+    namespace = "com.behnamuix.metremajazi"
     compileSdk = 35
     buildFeatures{
         viewBinding=true //این کد
     }
 
+
     defaultConfig {
-        applicationId = "com.behnamuix.mvp"
+        applicationId = "com.behnamuix.metremajazi"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -39,16 +40,22 @@ android {
 }
 
 dependencies {
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation(libs.androidx.appcompat.v161)
+    implementation(libs.androidx.core.ktx.v1120)
+    implementation(libs.androidx.constraintlayout.v214)
+
+    // وابستگی‌های ARCore
+    implementation(libs.core.v1400)
+    implementation(libs.sceneform.core)
+    implementation("com.google.ar.sceneform.ux:sceneform-ux:1.17.1")
+    implementation ("com.google.android.material:material:1.11.0")
     implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.google.ar.sceneform:assets:1.17.1")
+
+
+    implementation("ir.tapsell.plus:tapsell-plus-sdk-android:2.3.2")
+
+
+
+
 }
