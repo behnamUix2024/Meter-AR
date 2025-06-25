@@ -56,7 +56,7 @@ class TapsellApi(private val activity: Activity) {
                     super.response(p0)
                     if (p0 != null) {
                         initResponseID = p0.responseId
-                        Toast.makeText(activity, "Ok+${initResponseID}+Now show ads!", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(activity, "Ok+${initResponseID}+Now show ads!", Toast.LENGTH_SHORT).show()
                         showAds(initResponseID)
                     }
 
