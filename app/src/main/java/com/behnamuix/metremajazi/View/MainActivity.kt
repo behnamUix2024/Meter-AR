@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
                     isTutorialDialogShown = true
                     Handler(Looper.getMainLooper()).postDelayed({
                         TapsellApi(this@MainActivity).TapsellConfig()
-                    }, 200)
+                    }, 100)
                 }
                 show()
             }
