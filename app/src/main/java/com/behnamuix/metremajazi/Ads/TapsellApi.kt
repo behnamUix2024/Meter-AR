@@ -12,12 +12,14 @@ import ir.tapsell.plus.model.AdNetworkError
 import ir.tapsell.plus.model.AdNetworks
 import ir.tapsell.plus.model.TapsellPlusAdModel
 import ir.tapsell.plus.model.TapsellPlusErrorModel
+import kotlin.properties.Delegates
+
 //add this:
 // implementation("ir.tapsell.plus:tapsell-plus-sdk-android:2.3.2")
 // to gradle
 class TapsellApi(private val activity: Activity) {
 
-    private var initResponseID = ""
+    private var initResponseID =""
 
     private var tapsell_key = MainModel().TAPSELL_KEY
 
@@ -64,7 +66,7 @@ class TapsellApi(private val activity: Activity) {
 
                 override fun error(p0: String?) {
                     super.error(p0)
-                    Toast.makeText(activity, "Error+${p0.toString()}", Toast.LENGTH_SHORT).show()
+                  //Toast.makeText(activity, "تبلیغ آماده نیست!", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -73,7 +75,8 @@ class TapsellApi(private val activity: Activity) {
 
     private fun showAds(InterstitialID: String) {
         TapsellPlus.showInterstitialAd(
-            activity, InterstitialID,
+            activity,
+            InterstitialID,
             object : AdShowListener() {
                 override fun onOpened(p0: TapsellPlusAdModel?) {
                    // Toast.makeText(activity, "تبلیغات باز شد", Toast.LENGTH_SHORT).show()

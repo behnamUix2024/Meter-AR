@@ -3,6 +3,7 @@ package com.behnamuix.metremajazi.Presenter
 import android.content.Context
 import android.hardware.camera2.CameraManager
 import android.widget.Toast // این ایمپورت را نگه می‌داریم اما از آن در Presenter استفاده نمی‌کنیم
+import com.behnamuix.metremajazi.Ads.TapsellApi
 import com.behnamuix.metremajazi.Contract.MainContract
 import com.behnamuix.metremajazi.Model.MainModel
 import com.behnamuix.metremajazi.R
@@ -40,7 +41,6 @@ class MainPresenter(
             .thenAccept { renderable ->
                 measurementNode = Node().apply { this.renderable = renderable }
                 // می‌توانید اینجا پیامی بدهید که Renderable آماده است
-                view.showError("ابزار متر مجازی آماده است.") // از View برای نمایش پیام استفاده شد
             }
             .exceptionally { throwable ->
                 view.showError("خطا در ساخت رندرابل: ${throwable.message}")
